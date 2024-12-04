@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.container {
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  grid-template-columns: repeat(4, 1fr);
+  /* Creates a 4-column grid */
+  grid-template-rows: auto;
+  /* Rows will adjust based on content */
+  gap: 20px;
+  /* Space between each channel */
+  padding: 100px;
+}
+
+.bodytext {
+  align-items: center;
+  text-align: center;
+}
+
+.channel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+
+.channel:hover {
+  transform: scale(1.05);
+}
+
+.textOverlay {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background */
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 0;
+  /* Hide initially */
+  transition: opacity 0.3s ease;
+}
+
+.channel:hover .textOverlay {
+  opacity: 1;
+  /* Show text on hover */
+}
+
+.container {
+  /* Existing container styling */
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  /* Space for the footer */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  border-top: 5px solid #42adeb;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  /* Ensure the font matches the rest of the site */
+}
+
+.footerLeft,
+.footerRight {
+  display: flex;
+  align-items: center;
+}
+
+.footerCenter {
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+}
+
+.footerButton {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.footerText {
+  font-size: 2.4em;
+  margin-right: 20px;
+  font-weight: 900;
+  color: #42adeb;
+}
+
+.footerDate {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.footerPointer {
+  font-size: 1.5em;
+}
